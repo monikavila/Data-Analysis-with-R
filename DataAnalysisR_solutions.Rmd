@@ -24,6 +24,7 @@ library(tidyverse)
 library(ggplot2)
 library(finalfit)
 library(naniar)
+library(ggplot2)
 ```
 
 # Step 2. CHANGE WORKING DIRECTORY
@@ -225,7 +226,8 @@ quantile(df_subset_nona$peso, c(.25, .5, .75, .95))
 
 # Histogram
 hist(df_subset$peso)
-
+# Histogram using ggplot2 library
+ggplot(df_subset, aes(x=peso)) + geom_histogram()
 # Density 
 d<-density(df_subset_nona$peso)
 plot(d)
