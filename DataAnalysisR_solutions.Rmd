@@ -38,9 +38,10 @@ setwd("/Users/moka/Dropbox/0.POST-PHD/GOALS/2.CODE/R/Data Analysis with R")
 
 ```{r}
 # Upload data 
+
   # Using tidyverse package
   df_tidy<-read_csv("Data/raw_data.csv")
-  # Check data set
+  # Check data settypeof(
   glimpse(df_tidy)
 
   # Alternative method without using tidyverse package
@@ -294,7 +295,8 @@ summary(linear_model)
 quadratic_model<-lm(df_subset_nona$peso~poly(df_subset_nona$semgest,2)*df_subset_nona$motherworks.1)
 summary(quadratic_model)
 ```
-CAUTION: we are not estimating causal relationships, only correlations. 
+
+CAUTION: we are not estimating causal relationships, only correlations.
 
 # Step 7. Model evaluation
 
